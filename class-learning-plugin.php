@@ -29,17 +29,17 @@ if ( ! function_exists( 'add_action' ) ) {
 }
 
 /* Plugin Constants */
-if (!defined('WP_POST_VIEW_URL')) {
-    define('WP_POST_VIEW_URL', plugin_dir_url(__FILE__));
+if (!defined('MD_LEARN_VIEW_URL')) {
+    define('MD_LEARN_VIEW_URL', plugin_dir_url(__FILE__));
 }
 
-if (!defined('WP_POST_VIEW_PLUGIN_PATH')) {
-    define('WP_POST_VIEW_PLUGIN_PATH', plugin_dir_path(__FILE__));
+if (!defined('MD_LEARN_VIEW_PLUGIN_PATH')) {
+    define('MD_LEARN_VIEW_PLUGIN_PATH', plugin_dir_path(__FILE__));
 }
 
-require_once WP_POST_VIEW_PLUGIN_PATH . '/includes/settings.php';
+require_once MD_LEARN_VIEW_PLUGIN_PATH . '/includes/settings.php';
 
-require_once WP_POST_VIEW_PLUGIN_PATH . '/includes/shortcodes.php';
+require_once MD_LEARN_VIEW_PLUGIN_PATH . '/includes/shortcodes.php';
 
 register_activation_hook( __FILE__, array('Wp_post_view_settings','wppv_activation_hook') );
 
